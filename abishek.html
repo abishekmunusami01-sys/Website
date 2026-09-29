@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+OM MURUGA Electrical & Hardware Shop
+</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #222;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+  background:
+    linear-gradient(
+      135deg,
+      #0d47a1,
+      #1565c0
+    );
+
+  color: white;
+
+  padding: 28px 15px;
+
+  text-align: center;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px;
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+
+  margin: 20px 0;
+
+}
+
+.search-box input {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border:
+    1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  outline: none;
+
+}
+
+.search-box input:focus {
+
+  border-color: #0d47a1;
+
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.categories {
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 25px;
+
+}
+
+.category-btn {
+
+  background: white;
+
+  color: #0d47a1;
+
+  border:
+    2px solid #0d47a1;
+
+  padding: 10px 15px;
+
+  border-radius: 25px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+
+.category-btn:hover,
+.category-btn.active {
+
+  background: #0d47a1;
+
+  color: white;
+
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.products {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+
+  gap: 20px;
+
+}
+
+
+.product {
+
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(0,0,0,0.1);
+
+  text-align: center;
+
+  transition: .2s;
+
+}
+
+.product:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0,0,0,0.15);
+
+}
+
+
+.product-icon {
+
+  font-size: 58px;
+
+  margin-bottom: 12px;
+
+}
+
+
+.product h3 {
+
+  margin-bottom: 7px;
+
+}
+
+
+.product-category {
+
+  font-size: 13px;
+
+  color: #777;
+
+  margin-bottom: 8px;
+
+}
+
+
+.product-description {
+
+  font-size: 14px;
+
+  color: #666;
+
+  min-height: 35px;
+
+}
+
+
+.price {
+
+  color: #0d47a1;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  margin: 12px 0;
+
+}
+
+
+.quantity-input {
+
+  width: 65px;
+
+  padding: 9px;
+
+  text-align: center;
+
+  border:
+    1px solid #ccc;
+
+  border-radius: 5px;
+
+}
+
+
+.add-btn {
+
+  background: #0d47a1;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  margin-left: 5px;
+
+}
+
+
+.add-btn:hover {
+
+  background: #083378;
+
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart {
+
+  margin-top: 40px;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(0,0,0,0.1);
+
+}
+
+
+.cart h2 {
+
+  margin-bottom: 15px;
+
+}
+
+
+.cart-item {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px 0;
+
+  border-bottom:
+    1px solid #ddd;
+
+}
+
+
+.cart-item-info {
+
+  flex: 1;
+
+}
+
+
+.cart-item-name {
+
+  font-weight: bold;
+
+  font-size: 16px;
+
+}
+
+
+.cart-item-price {
+
+  color: #555;
+
+  font-size: 14px;
+
+  margin-top: 5px;
+
+}
+
+
+.cart-controls {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+}
+
+
+.cart-controls button {
+
+  border: none;
+
+  background: #0d47a1;
+
+  color: white;
+
+  width: 32px;
+
+  height: 32px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+
+.remove-btn {
+
+  background:
+    #e53935 !important;
+
+  width: auto !important;
+
+  padding:
+    5px 10px;
+
+}
+
+
+.total {
+
+  text-align: right;
+
+  font-size: 24px;
+
+  font-weight: bold;
+
+  margin-top: 20px;
+
+  color: #0d47a1;
+
+}
+
+
+.empty {
+
+  color: #777;
+
+  padding: 10px 0;
+
+}
+
+
+/* =====================================================
+   CUSTOMER DETAILS
+===================================================== */
+
+.customer-box {
+
+  margin-top: 30px;
+
+  padding: 20px;
+
+  background:
+    #f7f9fc;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 10px;
+
+}
+
+
+.customer-box h3 {
+
+  margin-bottom: 15px;
+
+  color: #0d47a1;
+
+}
+
+
+.customer-box label {
+
+  display: block;
+
+  margin-top: 12px;
+
+  margin-bottom: 5px;
+
+  font-weight: bold;
+
+}
+
+
+.customer-box input,
+.customer-box textarea {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border:
+    1px solid #ccc;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+
+}
+
+
+.customer-box textarea {
+
+  min-height: 90px;
+
+  resize: vertical;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.clear-btn {
+
+  background:
+    #e53935;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  margin-top: 15px;
+
+}
+
+
+.order-btn {
+
+  background:
+    #25d366;
+
+  color: white;
+
+  border: none;
+
+  width: 100%;
+
+  padding: 16px;
+
+  margin-top: 20px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+}
+
+
+.order-btn:hover {
+
+  background:
+    #1da851;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+  background: #222;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 25px;
+
+  margin-top: 40px;
+
+}
+
+footer p {
+
+  margin: 5px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px) {
+
+  header h1 {
+
+    font-size: 23px;
+
+  }
+
+
+  .container {
+
+    padding: 12px;
+
+  }
+
+
+  .products {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .cart-item {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .cart-controls {
+
+    width: 100%;
+
+  }
+
+
+  .cart-controls button {
+
+    width: 38px;
+
+    height: 38px;
+
+  }
+
+}
+
+
+/* =====================================================
+   NO PRODUCTS
+===================================================== */
+
+.no-products {
+
+  grid-column:
+    1 / -1;
+
+  text-align:
+    center;
+
+  padding: 40px;
+
+  color: #777;
+
+  font-size: 18px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================
+     HEADER
+=================================================== -->
+
+<header>
+
+  <h1>
+    ⚡ OM MURUGA Electrical & Hardware Shop
+  </h1>
+
+  <p>
+    Electrical • Construction • Motors • Farming • Mechanical • Household
+  </p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- ===================================================
+     PRODUCTS
+=================================================== -->
+
+<h2>
+  🛍️ Our Products
+</h2>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+  <input
+    type="text"
+    id="search"
+    placeholder="🔍 Search products..."
+    oninput="searchProducts()"
+  >
+
+</div>
+
+
+<!-- ===================================================
+     CATEGORY BUTTONS
+=================================================== -->
+
+<div class="categories">
+
+  <button
+    class="category-btn active"
+    onclick="filterCategory('All', this)">
+    All
+  </button>
+
+
+  <button
+    class="category-btn"
+    onclick="filterCategory('Electrical', this)">
+    ⚡ Electrical
+  </button>
+
+
+  <button
+    class="category-btn"
+    onclick="filterCategory('Construction', this)">
+    🏗️ Construction
+  </button>
+
+
+  <button
+    class="category-btn"
+    onclick="filterCategory('Motors & Electronics', this)">
+    ⚙️ Motors & Electronics
+  </button>
+
+
+  <button
+    class="category-btn"
+    onclick="filterCategory('Farming', this)">
+    🌾 Farming
+  </button>
+
+
+  <button
+    class="category-btn"
+    onclick="filterCategory('Mechanical', this)">
+    🔧 Mechanical
+  </button>
+
+
+  <button
+    class="category-btn"
+    onclick="filterCategory('Household', this)">
+    🏠 Household
+  </button>
+
+</div>
+
+
+<!-- ===================================================
+     PRODUCT LIST
+=================================================== -->
+
+<div
+  class="products"
+  id="products">
+</div>
+
+
+<!-- ===================================================
+     CART
+=================================================== -->
+
+<div class="cart">
+
+  <h2>
+    🛒 Your Cart
+  </h2>
+
+
+  <div id="cartItems">
+
+    <p class="empty">
+      Your cart is empty.
+    </p>
+
+  </div>
+
+
+  <div class="total">
+
+    Total:
+    ₹<span id="total">0</span>
+
+  </div>
+
+
+  <button
+    class="clear-btn"
+    onclick="clearCart()">
+
+    🗑️ Clear Cart
+
+  </button>
+
+
+  <!-- =================================================
+       CUSTOMER DETAILS
+  ================================================== -->
+
+  <div class="customer-box">
+
+    <h3>
+      👤 Customer Details
+    </h3>
+
+
+    <label>
+      Customer Name
+    </label>
+
+    <input
+      type="text"
+      id="customerName"
+      placeholder="Enter your name"
+    >
+
+
+    <label>
+      Phone Number
+    </label>
+
+    <input
+      type="tel"
+      id="customerPhone"
+      placeholder="Enter your phone number"
+    >
+
+
+    <label>
+      Delivery Address
+    </label>
+
+    <textarea
+      id="customerAddress"
+      placeholder="Enter your complete delivery address"
+    ></textarea>
+
+  </div>
+
+
+  <!-- =================================================
+       WHATSAPP
+  ================================================== -->
+
+  <button
+    class="order-btn"
+    onclick="placeOrder()">
+
+    📱 Order on WhatsApp
+
+  </button>
+
+</div>
+
+
+</div>
+
+
+<!-- ===================================================
+     FOOTER
+=================================================== -->
+
+<footer>
+
+  <p>
+    © 2026 OM MURUGA Electrical & Hardware Shop
+  </p>
+
+  <p>
+    All Rights Reserved
+  </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   PRODUCT DATABASE
+===================================================== */
+
+const products = [
+
+  /* ================= ELECTRICAL ================= */
+
+  {
+    id: 1,
+    name: "LED Bulb",
+    category: "Electrical",
+    description: "9W LED Bulb",
+    price: 120,
+    icon: "💡"
+  },
+
+  {
+    id: 2,
+    name: "LED Tube Light",
+    category: "Electrical",
+    description: "20W LED Tube Light",
+    price: 350,
+    icon: "💡"
+  },
+
+  {
+    id: 3,
+    name: "Modular Switch",
+    category: "Electrical",
+    description: "6A Modular Switch",
+    price: 80,
+    icon: "🔘"
+  },
+
+  {
+    id: 4,
+    name: "Electrical Socket",
+    category: "Electrical",
+    description: "16A Electrical Socket",
+    price: 150,
+    icon: "🔌"
+  },
+
+  {
+    id: 5,
+    name: "Ceiling Light",
+    category: "Electrical",
+    description: "LED Ceiling Light",
+    price: 750,
+    icon: "💡"
+  },
+
+  {
+    id: 6,
+    name: "Extension Board",
+    category: "Electrical",
+    description: "4 Socket Extension Board",
+    price: 450,
+    icon: "🔌"
+  },
+
+  {
+    id: 7,
+    name: "Electrical Wire",
+    category: "Electrical",
+    description: "1.5mm Copper Wire - 90m",
+    price: 1800,
+    icon: "⚡"
+  },
+
+  {
+    id: 8,
+    name: "MCB",
+    category: "Electrical",
+    description: "Single Pole MCB",
+    price: 180,
+    icon: "⚡"
+  },
+
+  {
+    id: 9,
+    name: "Ceiling Fan",
+    category: "Electrical",
+    description: "1200mm Ceiling Fan",
+    price: 2200,
+    icon: "🌀"
+  },
+
+  {
+    id: 10,
+    name: "Electrical Tape",
+    category: "Electrical",
+    description: "Insulation Tape",
+    price: 30,
+    icon: "🎞️"
+  },
+
+
+  /* ================= CONSTRUCTION ================= */
+
+  {
+    id: 11,
+    name: "Cement",
+    category: "Construction",
+    description: "50kg Cement Bag",
+    price: 420,
+    icon: "🏗️"
+  },
+
+  {
+    id: 12,
+    name: "PVC Pipe",
+    category: "Construction",
+    description: "PVC Water Pipe",
+    price: 250,
+    icon: "🔵"
+  },
+
+  {
+    id: 13,
+    name: "PVC Elbow",
+    category: "Construction",
+    description: "PVC Pipe Elbow",
+    price: 35,
+    icon: "🔧"
+  },
+
+  {
+    id: 14,
+    name: "PVC Tee",
+    category: "Construction",
+    description: "PVC Pipe Tee",
+    price: 45,
+    icon: "🔧"
+  },
+
+  {
+    id: 15,
+    name: "Water Tap",
+    category: "Construction",
+    description: "Kitchen / Bathroom Tap",
+    price: 350,
+    icon: "🚰"
+  },
+
+  {
+    id: 16,
+    name: "Door Lock",
+    category: "Construction",
+    description: "Heavy Duty Door Lock",
+    price: 650,
+    icon: "🔒"
+  },
+
+  {
+    id: 17,
+    name: "Construction Nails",
+    category: "Construction",
+    description: "Steel Construction Nails",
+    price: 100,
+    icon: "🔩"
+  },
+
+  {
+    id: 18,
+    name: "Steel Screws",
+    category: "Construction",
+    description: "Steel Screw Pack",
+    price: 120,
+    icon: "🔩"
+  },
+
+
+  /* ================= MOTORS ================= */
+
+  {
+    id: 19,
+    name: "Water Pump",
+    category: "Motors & Electronics",
+    description: "Domestic Water Pump",
+    price: 4500,
+    icon: "💧"
+  },
+
+  {
+    id: 20,
+    name: "Electric Motor",
+    category: "Motors & Electronics",
+    description: "1 HP Electric Motor",
+    price: 6500,
+    icon: "⚙️"
+  },
+
+  {
+    id: 21,
+    name: "Motor Capacitor",
+    category: "Motors & Electronics",
+    description: "Motor Starting Capacitor",
+    price: 250,
+    icon: "🔋"
+  },
+
+  {
+    id: 22,
+    name: "Motor Starter",
+    category: "Motors & Electronics",
+    description: "Single Phase Motor Starter",
+    price: 850,
+    icon: "⚡"
+  },
+
+  {
+    id: 23,
+    name: "Universal Adapter",
+    category: "Motors & Electronics",
+    description: "Universal Power Adapter",
+    price: 350,
+    icon: "🔌"
+  },
+
+  {
+    id: 24,
+    name: "Rechargeable Battery",
+    category: "Motors & Electronics",
+    description: "12V Rechargeable Battery",
+    price: 1200,
+    icon: "🔋"
+  },
+
+
+  /* ================= FARMING ================= */
+
+  {
+    id: 25,
+    name: "Water Hose",
+    category: "Farming",
+    description: "Agricultural Water Hose",
+    price: 800,
+    icon: "💧"
+  },
+
+  {
+    id: 26,
+    name: "Irrigation Pipe",
+    category: "Farming",
+    description: "Flexible Irrigation Pipe",
+    price: 600,
+    icon: "🌱"
+  },
+
+  {
+    id: 27,
+    name: "Garden Tool Set",
+    category: "Farming",
+    description: "Basic Farming Tool Set",
+    price: 750,
+    icon: "🌱"
+  },
+
+  {
+    id: 28,
+    name: "Hand Hoe",
+    category: "Farming",
+    description: "Steel Farming Hoe",
+    price: 300,
+    icon: "⛏️"
+  },
+
+  {
+    id: 29,
+    name: "Sickle",
+    category: "Farming",
+    description: "Agricultural Cutting Tool",
+    price: 250,
+    icon: "🌾"
+  },
+
+  {
+    id: 30,
+    name: "Pump Hose",
+    category: "Farming",
+    description: "Heavy Duty Pump Hose",
+    price: 900,
+    icon: "💧"
+  },
+
+
+  /* ================= MECHANICAL ================= */
+
+  {
+    id: 31,
+    name: "Ball Bearing",
+    category: "Mechanical",
+    description: "Industrial Ball Bearing",
+    price: 250,
+    icon: "⚙️"
+  },
+
+  {
+    id: 32,
+    name: "Spanner Set",
+    category: "Mechanical",
+    description: "Combination Spanner Set",
+    price: 650,
+    icon: "🔧"
+  },
+
+  {
+    id: 33,
+    name: "Adjustable Wrench",
+    category: "Mechanical",
+    description: "Adjustable Steel Wrench",
+    price: 350,
+    icon: "🔧"
+  },
+
+  {
+    id: 34,
+    name: "Nut & Bolt Set",
+    category: "Mechanical",
+    description: "Steel Nuts and Bolts",
+    price: 250,
+    icon: "🔩"
+  },
+
+  {
+    id: 35,
+    name: "Multi Purpose Grease",
+    category: "Mechanical",
+    description: "Mechanical Grease",
+    price: 180,
+    icon: "🛠️"
+  },
+
+  {
+    id: 36,
+    name: "Heavy Duty Chain",
+    category: "Mechanical",
+    description: "Metal Chain",
+    price: 500,
+    icon: "⛓️"
+  },
+
+  {
+    id: 37,
+    name: "Metal Cutting Disc",
+    category: "Mechanical",
+    description: "Cutting Disc",
+    price: 100,
+    icon: "⭕"
+  },
+
+
+  /* ================= HOUSEHOLD ================= */
+
+  {
+    id: 38,
+    name: "Mop",
+    category: "Household",
+    description: "Floor Cleaning Mop",
+    price: 250,
+    icon: "🧹"
+  },
+
+  {
+    id: 39,
+    name: "Cleaning Brush",
+    category: "Household",
+    description: "Hard Cleaning Brush",
+    price: 100,
+    icon: "🧹"
+  },
+
+  {
+    id: 40,
+    name: "Storage Container",
+    category: "Household",
+    description: "Plastic Storage Container",
+    price: 180,
+    icon: "📦"
+  },
+
+  {
+    id: 41,
+    name: "Kitchen Rack",
+    category: "Household",
+    description: "Steel Kitchen Rack",
+    price: 750,
+    icon: "🍽️"
+  },
+
+  {
+    id: 42,
+    name: "Hanger Set",
+    category: "Household",
+    description: "Clothes Hanger Set",
+    price: 150,
+    icon: "👕"
+  },
+
+  {
+    id: 43,
+    name: "Padlock",
+    category: "Household",
+    description: "Heavy Duty Padlock",
+    price: 250,
+    icon: "🔒"
+  }
+
+];
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+let cart = [];
+
+let currentCategory = "All";
+
+
+/* =====================================================
+   LOAD SAVED CART
+===================================================== */
+
+try {
+
+  const savedCart =
+    localStorage.getItem("omMurugaCart");
+
+  if (savedCart) {
+
+    cart =
+      JSON.parse(savedCart);
+
+  }
+
+} catch (error) {
+
+  cart = [];
+
+}
+
+
+/* =====================================================
+   SAVE CART
+===================================================== */
+
+function saveCart() {
+
+  localStorage.setItem(
+    "omMurugaCart",
+    JSON.stringify(cart)
+  );
+
+}
+
+
+/* =====================================================
+   DISPLAY PRODUCTS
+===================================================== */
+
+function displayProducts() {
+
+  const container =
+    document.getElementById(
+      "products"
+    );
+
+
+  const searchText =
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  container.innerHTML = "";
+
+
+  const filteredProducts =
+    products.filter(product => {
+
+
+      const matchesCategory =
+        currentCategory === "All" ||
+        product.category ===
+        currentCategory;
+
+
+      const matchesSearch =
+        product.name
+          .toLowerCase()
+          .includes(searchText)
+
+        ||
+
+        product.category
+          .toLowerCase()
+          .includes(searchText)
+
+        ||
+
+        product.description
+          .toLowerCase()
+          .includes(searchText);
+
+
+      return (
+        matchesCategory &&
+        matchesSearch
+      );
+
+    });
+
+
+  if (
+    filteredProducts.length === 0
+  ) {
+
+    container.innerHTML = `
+
+      <div class="no-products">
+
+        🔍 No products found.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  filteredProducts.forEach(
+    product => {
+
+      container.innerHTML += `
+
+        <div class="product">
+
+          <div class="product-icon">
+            ${product.icon}
+          </div>
+
+          <h3>
+            ${product.name}
+          </h3>
+
+          <div class="product-category">
+            ${product.category}
+          </div>
+
+          <p class="product-description">
+            ${product.description}
+          </p>
+
+          <div class="price">
+            ₹${product.price.toLocaleString("en-IN")}
+          </div>
+
+          <div>
+
+            <input
+              type="number"
+              min="1"
+              value="1"
+              id="qty-${product.id}"
+              class="quantity-input"
+            >
+
+            <button
+              class="add-btn"
+              onclick="addToCart(${product.id})">
+
+              Add to Cart
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+function addToCart(productId) {
+
+  const product =
+    products.find(
+      p => p.id === productId
+    );
+
+
+  const quantityInput =
+    document.getElementById(
+      "qty-" + productId
+    );
+
+
+  let quantity =
+    parseInt(
+      quantityInput.value
+    );
+
+
+  if (
+    isNaN(quantity) ||
+    quantity < 1
+  ) {
+
+    quantity = 1;
+
+  }
+
+
+  const existing =
+    cart.find(
+      item =>
+        item.id === productId
+    );
+
+
+  if (existing) {
+
+    existing.quantity +=
+      quantity;
+
+  } else {
+
+    cart.push({
+
+      id: product.id,
+
+      name: product.name,
+
+      price: product.price,
+
+      quantity: quantity
+
+    });
+
+  }
+
+
+  saveCart();
+
+  displayCart();
+
+
+  /* Button feedback */
+
+  alert(
+    product.name +
+    " added to cart!"
+  );
+
+}
+
+
+/* =====================================================
+   DISPLAY CART
+===================================================== */
+
+function displayCart() {
+
+  const cartItems =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  const totalElement =
+    document.getElementById(
+      "total"
+    );
+
+
+  cartItems.innerHTML = "";
+
+
+  let total = 0;
+
+
+  if (cart.length === 0) {
+
+    cartItems.innerHTML =
+      '<p class="empty">Your cart is empty.</p>';
+
+    totalElement.innerText =
+      "0";
+
+    return;
+
+  }
+
+
+  cart.forEach(
+    (item, index) => {
+
+      const itemTotal =
+        item.price *
+        item.quantity;
+
+
+      total +=
+        itemTotal;
+
+
+      cartItems.innerHTML += `
+
+        <div class="cart-item">
+
+          <div class="cart-item-info">
+
+            <div class="cart-item-name">
+
+              ${item.name}
+
+            </div>
+
+            <div class="cart-item-price">
+
+              ₹${item.price.toLocaleString("en-IN")}
+              ×
+              ${item.quantity}
+              =
+              ₹${itemTotal.toLocaleString("en-IN")}
+
+            </div>
+
+          </div>
+
+
+          <div class="cart-controls">
+
+            <button
+              onclick="changeQuantity(${index}, -1)">
+              −
+            </button>
+
+            <strong>
+              ${item.quantity}
+            </strong>
+
+            <button
+              onclick="changeQuantity(${index}, 1)">
+              +
+            </button>
+
+            <button
+              class="remove-btn"
+              onclick="removeItem(${index})">
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+  );
+
+
+  totalElement.innerText =
+    total.toLocaleString(
+      "en-IN"
+    );
+
+}
+
+
+/* =====================================================
+   CHANGE QUANTITY
+===================================================== */
+
+function changeQuantity(
+  index,
+  change
+) {
+
+  cart[index].quantity +=
+    change;
+
+
+  if (
+    cart[index].quantity <= 0
+  ) {
+
+    cart.splice(index, 1);
+
+  }
+
+
+  saveCart();
+
+  displayCart();
+
+}
+
+
+/* =====================================================
+   REMOVE ITEM
+===================================================== */
+
+function removeItem(index) {
+
+  cart.splice(
+    index,
+    1
+  );
+
+  saveCart();
+
+  displayCart();
+
+}
+
+
+/* =====================================================
+   CLEAR CART
+===================================================== */
+
+function clearCart() {
+
+  if (
+    cart.length === 0
+  ) {
+
+    return;
+
+  }
+
+
+  if (
+    confirm(
+      "Clear all products from your cart?"
+    )
+  ) {
+
+    cart = [];
+
+    saveCart();
+
+    displayCart();
+
+  }
+
+}
+
+
+/* =====================================================
+   CATEGORY FILTER
+===================================================== */
+
+function filterCategory(
+  category,
+  button
+) {
+
+  currentCategory =
+    category;
+
+
+  document
+    .querySelectorAll(
+      ".category-btn"
+    )
+    .forEach(
+      btn => {
+
+        btn.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+
+  button.classList.add(
+    "active"
+  );
+
+
+  displayProducts();
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchProducts() {
+
+  displayProducts();
+
+}
+
+
+/* =====================================================
+   WHATSAPP ORDER
+===================================================== */
+
+function placeOrder() {
+
+  /* CHECK CART */
+
+  if (
+    cart.length === 0
+  ) {
+
+    alert(
+      "Please add products to your cart first."
+    );
+
+    return;
+
+  }
+
+
+  /* CUSTOMER DETAILS */
+
+  const customerName =
+    document
+      .getElementById(
+        "customerName"
+      )
+      .value
+      .trim();
+
+
+  const customerPhone =
+    document
+      .getElementById(
+        "customerPhone"
+      )
+      .value
+      .trim();
+
+
+  const customerAddress =
+    document
+      .getElementById(
+        "customerAddress"
+      )
+      .value
+      .trim();
+
+
+  /* VALIDATION */
+
+  if (!customerName) {
+
+    alert(
+      "Please enter your name."
+    );
+
+    document
+      .getElementById(
+        "customerName"
+      )
+      .focus();
+
+    return;
+
+  }
+
+
+  if (!customerPhone) {
+
+    alert(
+      "Please enter your phone number."
+    );
+
+    document
+      .getElementById(
+        "customerPhone"
+      )
+      .focus();
+
+    return;
+
+  }
+
+
+  if (!customerAddress) {
+
+    alert(
+      "Please enter your delivery address."
+    );
+
+    document
+      .getElementById(
+        "customerAddress"
+      )
+      .focus();
+
+    return;
+
+  }
+
+
+  /* =================================================
+     BUILD WHATSAPP MESSAGE
+  ================================================= */
+
+  let message =
+    "🛒 *OM MURUGA ELECTRICAL & HARDWARE SHOP*\n\n";
+
+
+  message +=
+    "📋 *ORDER LIST*\n";
+
+
+  message +=
+    "━━━━━━━━━━━━━━━━━━\n\n";
+
+
+  message +=
+    "👤 *Customer:* " +
+    customerName +
+    "\n";
+
+
+  message +=
+    "📞 *Phone:* " +
+    customerPhone +
+    "\n\n";
+
+
+  let total = 0;
+
+
+  cart.forEach(
+    (item, index) => {
+
+      const itemTotal =
+        item.price *
+        item.quantity;
+
+
+      total +=
+        itemTotal;
+
+
+      message +=
+        (index + 1) +
+        ". *" +
+        item.name +
+        "*\n";
+
+
+      message +=
+        "   Quantity: " +
+        item.quantity +
+        "\n";
+
+
+      message +=
+        "   Price: ₹" +
+        item.price.toLocaleString(
+          "en-IN"
+        ) +
+        " each\n";
+
+
+      message +=
+        "   Amount: ₹" +
+        itemTotal.toLocaleString(
+          "en-IN"
+        ) +
+        "\n\n";
+
+    }
+  );
+
+
+  message +=
+    "━━━━━━━━━━━━━━━━━━\n";
+
+
+  message +=
+    "💰 *GRAND TOTAL: ₹" +
+    total.toLocaleString(
+      "en-IN"
+    ) +
+    "*\n\n";
+
+
+  message +=
+    "📍 *Delivery Address:*\n" +
+    customerAddress +
+    "\n\n";
+
+
+  message +=
+    "✅ Please confirm product availability and final price.";
+
+
+  /* =================================================
+     SHOP WHATSAPP NUMBER
+  ================================================== */
+
+  const phoneNumber =
+    "917339498464";
+
+
+  /* =================================================
+     CREATE WHATSAPP URL
+  ================================================== */
+
+  const whatsappURL =
+    "https://wa.me/" +
+    phoneNumber +
+    "?text=" +
+    encodeURIComponent(
+      message
+    );
+
+
+  /* OPEN WHATSAPP */
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+displayProducts();
+
+displayCart();
+
+</script>
+
+</body>
+
+</html>
